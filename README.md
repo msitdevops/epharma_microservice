@@ -6,9 +6,9 @@ In this we are trying to make a e-pharmacy web application with microservice arc
 
 # Project Desired State and current Status
 
-Currently this application contains User login features and further in the project we are likely to incorporated features like book Appointment, Drug Finder, Symptom checker etc.
+Currently this application contains User login features and further in the project we are likely to incorporate features like book Appointment, Drug Finder, Symptom checker etc.
 
-We have unittests for the login funtion ready up until now and We are currently working on automating the builds with Jenkins CI. 
+We have unittests for the login funtion ready until now and We are currently working on automating the builds with Jenkins CI. 
 
 This Repository contains code only in develop branch as no staging and deployment have taken place.
 
