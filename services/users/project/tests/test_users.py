@@ -155,7 +155,8 @@ class TestUserService(BaseTestCase):
 
     def test_single_user(self):
         """Ensure get single user behaves correctly."""
-        user = add_user('msitdevops', 'msitdevops@gmail.com', 'greaterthaneight')
+        user = add_user('msitdevops', 'msitdevops@gmail.com',
+                        'greaterthaneight')
         with self.client:
             response = self.client.get(f'/users/{user.id}')
             data = json.loads(response.data.decode())

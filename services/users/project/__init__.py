@@ -25,8 +25,8 @@ def create_app(script_info=None):
     CORS(app)
 
     # set config for the app
-    # App settings and FLASK_ENV can be seen in docker-compose files 
-    # respective to the type of testing (dev or prod)  
+    # App settings and FLASK_ENV can be seen in docker-compose files
+    # respective to the type of testing (dev or prod)
     app_settings = os.getenv('APP_SETTINGS')
     app.config.from_object(app_settings)
 
@@ -36,19 +36,18 @@ def create_app(script_info=None):
     migrate.init_app(app, db)
     bcrypt.init_app(app)
 
-
     # register blueprints
     from project.api.users import users_blueprint
     app.register_blueprint(users_blueprint)
-    
+
     from project.api.auth import auth_blueprint
     app.register_blueprint(auth_blueprint)
-    
+
     # shell context for flask cli
-    # This is used to register the app and db to the shell. 
-    # Now we can work with the application context and the database without 
+    # This is used to register the app and db to the shell.
+    # Now we can work with the application context and the database without
     # having to import them directly into the shell, which you’ll see shortly.
-    
+
     @app.shell_context_processor
     def ctx():
         return {'app': app, 'db': db}

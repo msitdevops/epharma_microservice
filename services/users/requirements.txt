@@ -10,3 +10,5 @@ Flask-Testing==0.6.2
 gunicorn==19.8.1
 psycopg2-binary==2.7.4
 pyjwt==1.6.4
+unittest-xml-reporting==2.2.0
+xmlrunner==1.7.7
